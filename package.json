@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/szewczykmira/dina/issues"
   },
-  "homepage": "https://github.com/szewczykmira/dina#readme"
+  "homepage": "https://github.com/szewczykmira/dina#readme",
+  "devDependencies": {
+    "typescript": "^4.8.3"
+  }
 }
