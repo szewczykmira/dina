@@ -1,0 +1,27 @@
+{
+  "name": "dina",
+  "version": "0.0.1",
+  "description": "Return data from an API while learning new frontend ways.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szewczykmira/dina.git"
+  },
+  "keywords": [
+    "dina",
+    "js",
+    "webcomponents"
+  ],
+  "author": "szewczykmira",
+  "license": "CC-BY-4.0",
+  "bugs": {
+    "url": "https://github.com/szewczykmira/dina/issues"
+  },
+  "homepage": "https://github.com/szewczykmira/dina#readme",
+  "devDependencies": {
+    "typescript": "^4.8.3"
+  }
+}
