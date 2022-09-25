@@ -2,6 +2,8 @@ import { LitElement, html } from 'lit';
 import { property } from 'lit/decorators.js';
 import { styles } from './styles.js';
 
+import '../Footer/Footer.js';
+
 const logo = new URL('../../../../assets/open-wc-logo.svg', import.meta.url)
   .href;
 
@@ -29,16 +31,7 @@ export class DinaApp extends LitElement {
           Code examples
         </a>
       </main>
-
-      <p class="app-footer">
-        🚽 Made with love by
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/open-wc"
-          >open-wc</a
-        >.
-      </p>
+      <my-footer url="https://github.com/open-wc"></my-footer>
     `;
   }
 }
