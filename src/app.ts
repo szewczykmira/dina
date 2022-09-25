@@ -1,3 +1,3 @@
-import { DinaApp } from './DinaApp.js';
+import { DinaApp } from './components/DinaApp/DinaApp.js';
 
 customElements.define('dina-app', DinaApp);
