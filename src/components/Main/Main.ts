@@ -13,20 +13,10 @@ export class DinaApp extends LitElement {
   render() {
     return html`
       <main>
-        <header-container title=${this.title}></header-container>
-
-        <p>
-          Edit <code>src/components/DianApp/DinaApp.ts</code> and save to
-          reload.
-        </p>
-        <a
-          class="app-link"
-          href="https://open-wc.org/guides/developing-components/code-examples"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Code examples
-        </a>
+        <header-container
+          title=${this.title}
+          helpUrl="https://open-wc.org/guides/developing-components/code-examples"
+        ></header-container>
       </main>
       <footer-container url="https://github.com/open-wc"></footer-container>
     `;
