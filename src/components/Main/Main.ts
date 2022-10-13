@@ -3,6 +3,7 @@ import { property } from 'lit/decorators.js';
 import { styles } from './styles.js';
 
 import '../Footer/Footer.js';
+import '../Header/Header.js';
 
 export class DinaApp extends LitElement {
   @property({ type: String }) title = 'My fancy app';
@@ -12,7 +13,7 @@ export class DinaApp extends LitElement {
   render() {
     return html`
       <main>
-        <h1>${this.title}</h1>
+        <header-container title=${this.title}></header-container>
 
         <p>
           Edit <code>src/components/DianApp/DinaApp.ts</code> and save to
@@ -27,7 +28,7 @@ export class DinaApp extends LitElement {
           Code examples
         </a>
       </main>
-      <my-footer url="https://github.com/open-wc"></my-footer>
+      <footer-container url="https://github.com/open-wc"></footer-container>
     `;
   }
 }

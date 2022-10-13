@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
-@customElement('my-footer')
+@customElement('footer-container')
 export class FooterElement extends LitElement {
   @property({ type: String }) url = '';
 
