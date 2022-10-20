@@ -1,11 +1,38 @@
 import { LitElement, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
 
 import '../Character/index.js';
+import { ONE_API_KEY } from '../../config.js';
 
 @customElement('list-of-characters-component')
 export class ListOfCharactersComponent extends LitElement {
   @property({ type: Array }) characters = [];
+
+  @state() loading = false;
+
+  async connectedCallback(): Promise<void> {
+    await this.fetchData();
+    if (super.connectedCallback) {
+      super.connectedCallback();
+    }
+  }
+
+  async fetchData() {
+    this.loading = true;
+    const url = 'https://the-one-api.dev/v2/character';
+    fetch(url, {
+      method: 'GET',
+      headers: { Authorization: `Bearer ${ONE_API_KEY}` },
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
+        return response.json();
+      })
+      .then(content => console.log(content));
+    this.loading = false;
+  }
 
   render() {
     return html`<div>
