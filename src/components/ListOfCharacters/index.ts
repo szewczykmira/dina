@@ -12,6 +12,7 @@ export class ListOfCharactersComponent extends LitElement {
 
   async connectedCallback(): Promise<void> {
     await this.fetchData();
+    // @ts-ignore
     if (super.connectedCallback) {
       super.connectedCallback();
     }
