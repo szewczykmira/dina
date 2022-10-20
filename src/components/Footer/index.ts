@@ -1,12 +1,11 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
-@customElement('my-footer')
+@customElement('footer-container')
 export class FooterElement extends LitElement {
   @property({ type: String }) url = '';
 
   render() {
-    console.log(this.url);
     return html`
       <p class="app-footer">
         🚽 Made with love by
