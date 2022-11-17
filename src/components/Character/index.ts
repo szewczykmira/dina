@@ -20,7 +20,7 @@ export class CharacterElement extends LitElement {
   @property() character: LotrCharacter | null = null;
 
   render() {
-    return html`<div>${this.character?.name}</div>
+    return html`${this.character?.name}
       <hr />`;
   }
 }

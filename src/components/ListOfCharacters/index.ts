@@ -1,11 +1,15 @@
 import { LitElement, html } from 'lit';
-import { customElement, state } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
 
 import '../Character/index.js';
 import { ONE_API_KEY } from '../../config.js';
 
 @customElement('list-of-characters-component')
 export class ListOfCharactersComponent extends LitElement {
+  @property({ type: Number }) limit = 20;
+
+  @state() page = 1;
+
   @state() characters = [];
 
   @state() loading = false;
@@ -20,7 +24,7 @@ export class ListOfCharactersComponent extends LitElement {
 
   async fetchData() {
     this.loading = true;
-    const url = 'https://the-one-api.dev/v2/character';
+    const url = `https://the-one-api.dev/v2/character?limit=${this.limit}&page=${this.page}`;
     fetch(url, {
       method: 'GET',
       headers: { Authorization: `Bearer ${ONE_API_KEY}` },
@@ -37,14 +41,32 @@ export class ListOfCharactersComponent extends LitElement {
     this.loading = false;
   }
 
+  async handlePrev() {
+    this.page -= 1;
+    await this.fetchData();
+  }
+
+  async handleNext() {
+    this.page += 1;
+    await this.fetchData();
+  }
+
   render() {
-    return html`<div>
-      ${this.characters.map(
-        character =>
-          html`<character-component
-            .character=${character}
-          ></character-component>`
-      )}
-    </div>`;
+    return html`
+      <div>
+        <button @click=${this.handlePrev} ?disabled=${this.page === 1}>
+          PREV
+        </button>
+        <button @click=${this.handleNext}>NEXT</button>
+      </div>
+      <div>
+        ${this.characters.map(
+          character =>
+            html`<character-component
+              .character=${character}
+            ></character-component>`
+        )}
+      </div>
+    `;
   }
 }
