@@ -1,12 +1,12 @@
 import { LitElement, html } from 'lit';
-import { customElement, property, state } from 'lit/decorators.js';
+import { customElement, state } from 'lit/decorators.js';
 
 import '../Character/index.js';
 import { ONE_API_KEY } from '../../config.js';
 
 @customElement('list-of-characters-component')
 export class ListOfCharactersComponent extends LitElement {
-  @property({ type: Array }) characters = [];
+  @state() characters = [];
 
   @state() loading = false;
 
@@ -31,7 +31,9 @@ export class ListOfCharactersComponent extends LitElement {
         }
         return response.json();
       })
-      .then(content => console.log(content));
+      .then(content => {
+        this.characters = content.docs;
+      });
     this.loading = false;
   }
 
