@@ -7,7 +7,7 @@ import '../Header/index.js';
 import '../ListOfCharacters/index.js';
 
 export class DinaApp extends LitElement {
-  @property({ type: String }) title = 'My fancy app';
+  @property({ type: String }) title = 'where the Shadows lie';
 
   @property({ type: Array }) objects = ['a', 'b', 'c', 'd', 'e', 'F'];
 
