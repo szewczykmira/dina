@@ -14,8 +14,6 @@ export class ListOfCharactersComponent extends LitElement {
 
   @state() characters = [];
 
-  @state() loading = false;
-
   async connectedCallback(): Promise<void> {
     await this.fetchData();
     // @ts-ignore
@@ -25,7 +23,6 @@ export class ListOfCharactersComponent extends LitElement {
   }
 
   async fetchData() {
-    this.loading = true;
     const url = `https://the-one-api.dev/v2/character?limit=${this.limit}&page=${this.page}`;
     fetch(url, {
       method: 'GET',
@@ -41,7 +38,6 @@ export class ListOfCharactersComponent extends LitElement {
         this.pages = content.pages;
         this.characters = content.docs;
       });
-    this.loading = false;
   }
 
   async handlePrev() {
