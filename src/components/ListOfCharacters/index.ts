@@ -6,9 +6,11 @@ import { ONE_API_KEY } from '../../config.js';
 
 @customElement('list-of-characters-component')
 export class ListOfCharactersComponent extends LitElement {
-  @property({ type: Number }) limit = 20;
+  @property({ type: Number }) limit = 50;
 
   @state() page = 1;
+
+  @state() pages = null;
 
   @state() characters = [];
 
@@ -36,6 +38,7 @@ export class ListOfCharactersComponent extends LitElement {
         return response.json();
       })
       .then(content => {
+        this.pages = content.pages;
         this.characters = content.docs;
       });
     this.loading = false;
@@ -57,7 +60,9 @@ export class ListOfCharactersComponent extends LitElement {
         <button @click=${this.handlePrev} ?disabled=${this.page === 1}>
           PREV
         </button>
-        <button @click=${this.handleNext}>NEXT</button>
+        <button @click=${this.handleNext} ?disabled=${this.page === this.pages}>
+          NEXT
+        </button>
       </div>
       <div>
         ${this.characters.map(
