@@ -2,7 +2,8 @@ import { LitElement, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 
 import '../Character/index.js';
-import { ONE_API_KEY } from '../../config.js';
+import { ONE_API_KEY, ENV } from '../../config.js';
+import { lotrCharacters } from '../../helpers/fixtures.js';
 
 @customElement('list-of-characters-component')
 export class ListOfCharactersComponent extends LitElement {
@@ -23,6 +24,10 @@ export class ListOfCharactersComponent extends LitElement {
   }
 
   async fetchData() {
+    if (ENV === 'dev') {
+      this.characters = lotrCharacters.docs;
+      return;
+    }
     const url = `https://the-one-api.dev/v2/character?limit=${this.limit}&page=${this.page}`;
     fetch(url, {
       method: 'GET',
