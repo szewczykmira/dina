@@ -1,19 +1,7 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
-interface LotrCharacter {
-  _id: string;
-  birth: string;
-  death: string;
-  gener: string;
-  hair: string;
-  height: string;
-  name: string;
-  race: string;
-  realm: string;
-  spouse: string;
-  wikiUrl: string;
-}
+import LotrCharacter from '../../types/lotr_character.js';
 
 @customElement('character-component')
 export class CharacterElement extends LitElement {
