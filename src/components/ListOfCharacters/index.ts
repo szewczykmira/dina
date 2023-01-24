@@ -4,6 +4,7 @@ import { customElement, property, state } from 'lit/decorators.js';
 import '../Character/index.js';
 import { ONE_API_KEY, ENV } from '../../config.js';
 import { lotrCharacters } from '../../helpers/fixtures.js';
+import LotrCharacter from '../../types/lotr_character.js';
 
 @customElement('list-of-characters-component')
 export class ListOfCharactersComponent extends LitElement {
@@ -13,7 +14,7 @@ export class ListOfCharactersComponent extends LitElement {
 
   @state() pages = null;
 
-  @state() characters = [];
+  @state() characters: LotrCharacter[] = [];
 
   async connectedCallback(): Promise<void> {
     await this.fetchData();

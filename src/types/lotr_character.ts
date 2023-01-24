@@ -1,13 +1,13 @@
 export default interface LotrCharacter {
   _id: string;
-  birth: string;
-  death: string;
-  gener: string;
-  hair: string;
   height: string;
-  name: string;
-  race: string;
-  realm: string;
+  race: string; // can I do specific value?
+  gender: string;
+  birth: string;
   spouse: string;
+  death: string;
+  realm: string;
+  hair: string;
+  name: string;
   wikiUrl: string;
 }
