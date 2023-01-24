@@ -1,6 +1,7 @@
 ## editors
 /.vscode
 
+src/config.ts
 ## npm
 /node_modules/
 /npm-debug.log
