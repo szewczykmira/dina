@@ -19,20 +19,6 @@ export const styles = css`
     flex-grow: 1;
   }
 
-  .logo {
-    margin-top: 36px;
-    animation: app-logo-spin infinite 20s linear;
-  }
-
-  @keyframes app-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
   .app-footer {
     font-size: calc(12px + 0.5vmin);
     align-items: center;
