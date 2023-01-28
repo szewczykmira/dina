@@ -1,6 +1,7 @@
 import { LitElement, html } from 'lit';
 import { property } from 'lit/decorators.js';
 import { styles } from './styles.js';
+import { colors } from '../../../static/app.js';
 
 import '../Footer/index.js';
 import '../Header/index.js';
@@ -9,7 +10,7 @@ import '../ListOfCharacters/index.js';
 export class DinaApp extends LitElement {
   @property({ type: String }) title = 'where the Shadows lie';
 
-  static styles = styles;
+  static styles = [colors, styles];
 
   render() {
     return html`
