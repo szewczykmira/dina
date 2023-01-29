@@ -8,7 +8,7 @@ import '../Header/index.js';
 import '../ListOfCharacters/index.js';
 
 export class DinaApp extends LitElement {
-  @property({ type: String }) title = 'where the Shadows lie';
+  @property({ type: String }) title = 'One ring to rule them all';
 
   static styles = [colors, styles];
 
