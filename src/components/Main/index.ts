@@ -14,8 +14,8 @@ export class DinaApp extends LitElement {
 
   render() {
     return html`
+      <header-container title=${this.title}></header-container>
       <main>
-        <header-container title=${this.title}></header-container>
         <list-of-characters-component></list-of-characters-component>
       </main>
       <footer-container
