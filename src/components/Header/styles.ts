@@ -6,6 +6,6 @@ export const styles = css`
     background-color: var(--jet);
     color: var(--paradise-pink);
     padding: 2em;
-    text-align: center;
+    text-align: justify;
   }
 `;
