@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { styles } from './styles.js';
-import { colors } from '../../../static/app.js';
+import { colors } from '../../../static/shared.js';
 
 @customElement('footer-container')
 export class FooterElement extends LitElement {

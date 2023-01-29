@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit';
 import { property } from 'lit/decorators.js';
 import { styles } from './styles.js';
-import { colors } from '../../../static/app.js';
+import { colors } from '../../../static/shared.js';
 
 import '../Footer/index.js';
 import '../Header/index.js';

@@ -9,10 +9,8 @@ export const styles = css`
     justify-content: flex-start;
     font-size: calc(10px + 2vmin);
     color: var(--paradise-pink);
-    max-width: 960px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: var(--dina-app-background-color);
+    margin: 0 0;
+    background-color: var(--cosmic-latte);
   }
 
   main {
