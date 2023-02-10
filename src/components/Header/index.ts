@@ -12,7 +12,7 @@ export class HeaderElement extends LitElement {
 
   render() {
     return html`<header>
-      <h1>${this.title}</h1>
+      <div class="title">${this.title}</div>
     </header>`;
   }
 }

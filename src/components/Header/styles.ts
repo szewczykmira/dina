@@ -5,11 +5,15 @@ export const styles = css`
     margin: 0 0 auto 0;
     padding: 2em;
     background-color: var(--grey);
-    color: var(--teal);
     /*text*/
-    text-align: center;
+    color: var(--black);
+    text-align: right;
     font-style: italic;
-    font-size: 1em;
-    font-variant: small-caps;
+  }
+  .title {
+    text-decoration: overline;
+    text-decoration-color: var(--maroon);
+    text-decoration-thickness: 0.1em;
+    font-size: 1.5em;
   }
 `;
