@@ -9,6 +9,7 @@ export const styles = css`
     /*text*/
     text-align: justify;
     font-style: italic;
+    font-size: 1em;
     font-variant: small-caps;
   }
 `;
