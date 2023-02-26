@@ -10,4 +10,10 @@ export const styles = css`
   main {
     flex-grow: 1;
   }
+
+  .go-up-button {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+  }
 `;

@@ -12,11 +12,19 @@ export class DinaApp extends LitElement {
 
   static styles = [colors, styles];
 
+  goUp = () => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  };
+
   render() {
     return html`
       <header-container title=${this.title}></header-container>
       <main>
         <list-of-characters-component></list-of-characters-component>
+        <div class="go-up-button">
+          <button @click=${this.goUp}>Yep Yep</button>
+        </div>
       </main>
       <footer-container
         url="https://github.com/open-wc"
