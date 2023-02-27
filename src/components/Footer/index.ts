@@ -11,16 +11,23 @@ export class FooterElement extends LitElement {
 
   static styles = [colors, styles];
 
+  // TODO: make it sticky: https://github.com/szewczykmira/dina/issues/12
+
   render() {
     return html`
-      <p class="app-footer">
-        🚽 Made with love by
-        <a target="_blank" rel="noopener noreferrer" href=${this.url}>open-wc</a
-        >.
-        <a target="_blank" rel="noopener noreferrer" href=${this.helperUrl}
-          >Help</a
-        >
-      </p>
+      <footer>
+        <div>Just playing around with web components and CSS</div>
+        <div>
+          <a target="_blank" rel="noopener noreferrer" href=${this.url}
+            >open-wc</a
+          >.
+        </div>
+        <div>
+          <a target="_blank" rel="noopener noreferrer" href=${this.helperUrl}
+            >Help</a
+          >
+        </div>
+      </footer>
     `;
   }
 }

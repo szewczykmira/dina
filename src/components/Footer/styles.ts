@@ -9,18 +9,16 @@ export const styles = css`
     color: var(--grey);
     text-decoration: underline;
   }
+
   footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 3em 1em;
     background-color: var(--maroon);
     border-top: thick solid var(--teal);
     color: var(--grey);
     font-size: 0.5em;
-  }
-
-  .center {
-    justify-content: center;
-  }
-  .right {
-    text-align: right;
   }
 `;
