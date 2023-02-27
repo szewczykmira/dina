@@ -39,8 +39,6 @@ export class DinaApp extends LitElement {
     }
   };
 
-  // TODO: make sure that footer sticks to bottom
-
   render() {
     return html`
       <header-container title=${this.title}></header-container>
