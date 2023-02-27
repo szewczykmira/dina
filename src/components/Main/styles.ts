@@ -7,10 +7,6 @@ export const styles = css`
     margin: 0 0;
   }
 
-  main {
-    flex-grow: 1;
-  }
-
   .change-location {
     position: fixed;
     background-color: var(--teal);
