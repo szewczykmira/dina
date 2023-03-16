@@ -18,7 +18,8 @@ export const styles = css`
   }
 
   .characterCard {
-    border: solid;
+    border-bottom: solid;
+    border-color: var(--black);
     margin: 20px;
   }
 `;
