@@ -6,6 +6,9 @@ import { ONE_API_KEY, ENV } from '../../config.js';
 import { lotrCharacters } from '../../helpers/fixtures.js';
 import LotrCharacter from '../../types/lotr_character.js';
 
+import { styles } from './styles.js';
+import { colors } from '../../../static/shared.js';
+
 @customElement('list-of-characters-component')
 export class ListOfCharactersComponent extends LitElement {
   @property({ type: Number }) limit = 50;
@@ -15,6 +18,8 @@ export class ListOfCharactersComponent extends LitElement {
   @state() pages = null;
 
   @state() characters: LotrCharacter[] = [];
+
+  static styles = [colors, styles];
 
   async connectedCallback(): Promise<void> {
     await this.fetchData();
@@ -66,7 +71,7 @@ export class ListOfCharactersComponent extends LitElement {
           NEXT
         </button>
       </div>
-      <div>
+      <div class="characters">
         ${this.characters.map(
           character =>
             html`<character-component
