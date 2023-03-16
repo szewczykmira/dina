@@ -4,7 +4,7 @@ import { customElement, property, state } from 'lit/decorators.js';
 import '../Character/index.js';
 import { ONE_API_KEY, ENV } from '../../config.js';
 import { lotrCharacters } from '../../helpers/fixtures.js';
-import LotrCharacter from '../../types/lotr_character.js';
+import { LotrCharacter } from '../../types/lotr_character.js';
 
 import { styles } from './styles.js';
 import { colors } from '../../../static/shared.js';

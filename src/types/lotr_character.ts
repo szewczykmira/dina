@@ -1,5 +1,5 @@
-type Male = 'Male' | 'Most likely male' | 'Males' | 'male';
-type Female = 'Female';
+export type Male = 'Male' | 'Most likely male' | 'Males' | 'male';
+export type Female = 'Female';
 type UndefinedGender = '' | 'NaN';
 type Gender = Female | Male | UndefinedGender;
 
@@ -28,6 +28,7 @@ type EvilRaces =
   | 'Balrog'
   | 'Urulóki'
   | 'Stone-trolls'
+  | 'Vampire'
   | 'Maiar,Balrogs';
 type Race =
   | Human
@@ -42,7 +43,7 @@ type Race =
   | UnknownRace
   | Animals;
 
-export default interface LotrCharacter {
+export interface LotrCharacter {
   _id: string;
   height: string;
   race: Race;

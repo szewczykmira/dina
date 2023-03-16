@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { styles } from './styles.js';
 import { colors } from '../../../static/shared.js';
 
-import LotrCharacter from '../../types/lotr_character.js';
+import { LotrCharacter } from '../../types/lotr_character.js';
 
 @customElement('character-component')
 export class CharacterElement extends LitElement {
@@ -11,10 +11,6 @@ export class CharacterElement extends LitElement {
   character!: LotrCharacter;
 
   static styles = [styles, colors];
-
-  get genderIcon() {
-    return this.character.gender;
-  }
 
   render() {
     return html` <div class="characterCard">${this.character.name}</div> `;
