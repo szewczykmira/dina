@@ -2,43 +2,30 @@ import { css } from 'lit';
 
 export const styles = css`
   :host {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
     font-size: calc(10px + 2vmin);
-    color: #1a2b42;
-    max-width: 960px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: var(--dina-app-background-color);
+    color: var(--black);
+    margin: 0 0;
   }
 
-  main {
-    flex-grow: 1;
+  .change-location {
+    position: fixed;
+    background-color: var(--teal);
+    z-index: 10000;
+    padding: 0.3em;
+  }
+  .change-location:hover {
+    cursor: pointer;
+  }
+  .go-up-button {
+    bottom: 5%;
+    right: 5%;
+    margin-right: 1%;
+    border-radius: 5px 25px 15px;
   }
 
-  .logo {
-    margin-top: 36px;
-    animation: app-logo-spin infinite 20s linear;
-  }
-
-  @keyframes app-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  .app-footer {
-    font-size: calc(12px + 0.5vmin);
-    align-items: center;
-  }
-
-  .app-footer a {
-    margin-left: 5px;
+  .go-down-button {
+    bottom: 5%;
+    right: 3%;
+    border-radius: 15px 25px 5px;
   }
 `;

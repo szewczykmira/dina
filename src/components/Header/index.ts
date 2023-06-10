@@ -1,22 +1,18 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
+import { styles } from './styles.js';
+import { colors } from '../../../static/shared.js';
+
 @customElement('header-container')
 export class HeaderElement extends LitElement {
   @property({ type: String }) title = '';
 
-  @property({ type: String }) helpUrl = '';
+  static styles = [colors, styles];
 
   render() {
-    return html`<div>
-      <h1>${this.title}</h1>
-      <a
-        class="app-link"
-        href=${this.helpUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        >Help</a
-      >
-    </div>`;
+    return html`<header>
+      <div class="title">${this.title}</div>
+    </header>`;
   }
 }
