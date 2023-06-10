@@ -11,8 +11,6 @@ export class FooterElement extends LitElement {
 
   static styles = [colors, styles];
 
-  // TODO: make it sticky: https://github.com/szewczykmira/dina/issues/12
-
   render() {
     return html`
       <footer>
