@@ -22,4 +22,23 @@ export const styles = css`
     border-color: var(--black);
     margin: 20px;
   }
+
+  .male {
+    color: var(--maroon);
+  }
+
+  .female {
+    color: var(--teal);
+  }
+
+  .undefined {
+    color: var(--black);
+  }
+
+  .title {
+    display: flex;
+  }
+  .name {
+    flex: 1;
+  }
 `;
