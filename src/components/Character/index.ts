@@ -32,8 +32,23 @@ export class CharacterElement extends LitElement {
       }</span> <span>${renderGender(this.character.gender)}</span></div>
       <table>
         <tr><td>Race:</td><td>${this.character.race}</td></tr>
-        <tr><td>Birth:</td><td>${this.character.birth}</td></tr>
-        <tr><td>Death:</td><td>${this.character.death}</td></tr>
+        ${
+          this.character.birth
+            ? html`<tr>
+                <td>Birth:</td>
+                <td>${this.character.birth}</td>
+              </tr>`
+            : nothing
+        }
+        ${
+          this.character.death
+            ? html`<tr>
+                <td>Death:</td>
+                <td>${this.character.death}</td>
+              </tr>`
+            : nothing
+        }
+        
         ${
           this.character.spouse
             ? html`<tr>
