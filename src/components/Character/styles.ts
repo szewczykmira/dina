@@ -3,6 +3,7 @@ import { css } from 'lit';
 export const styles = css`
   :host {
     width: 33%;
+    font-size: calc(8px + 1vmin);
   }
 
   @media (max-width: 800px) {
@@ -36,6 +37,7 @@ export const styles = css`
   }
 
   .title {
+    font-size: calc(10px + 2vmin);
     display: flex;
   }
   .name {

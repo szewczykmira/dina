@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit';
+import { LitElement, html, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { styles } from './styles.js';
 import { colors } from '../../../static/shared.js';
@@ -30,6 +30,27 @@ export class CharacterElement extends LitElement {
       <div class="title"><span class="name">${
         this.character.name
       }</span> <span>${renderGender(this.character.gender)}</span></div>
+      <table>
+        <tr><td>Race:</td><td>${this.character.race}</td></tr>
+        <tr><td>Birth:</td><td>${this.character.birth}</td></tr>
+        <tr><td>Death:</td><td>${this.character.death}</td></tr>
+        ${
+          this.character.spouse
+            ? html`<tr>
+                <td>Spouse:</td>
+                <td>${this.character.spouse}</td>
+              </tr>`
+            : nothing
+        }
+        ${
+          this.character.realm
+            ? html`<tr>
+                <td>Realm:</td>
+                <td>${this.character.realm}</td>
+              </tr>`
+            : nothing
+        }
+      </table>
     </div></hr>
 
     </div>`;
