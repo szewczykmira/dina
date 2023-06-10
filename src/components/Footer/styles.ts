@@ -11,6 +11,10 @@ export const styles = css`
   }
 
   footer {
+    position: fixed;
+    bottom: 0px;
+    height: 3rem;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
