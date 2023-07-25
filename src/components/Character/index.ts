@@ -22,7 +22,7 @@ export class CharacterElement extends LitElement {
   @property()
   character!: LotrCharacter;
 
-  static styles = [styles, colors];
+  static styles = [colors, styles];
 
   render() {
     return html`<div class="characterCard">

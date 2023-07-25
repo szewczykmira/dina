@@ -21,4 +21,8 @@ export const styles = css`
   button:disabled {
     color: var(--teal);
   }
+
+  character-component {
+    --bottom-border-color: var(--teal);
+  }
 `;
