@@ -25,4 +25,7 @@ export const styles = css`
   character-component {
     --bottom-border-color: var(--teal);
   }
+  .disabled {
+    cursor: not-allowed;
+  }
 `;
