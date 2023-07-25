@@ -1,5 +1,6 @@
 import { LitElement, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
+import { classMap } from 'lit/directives/class-map.js';
 
 import '../Character/index.js';
 import { ONE_API_KEY, ENV } from '../../config.js';
@@ -61,13 +62,29 @@ export class ListOfCharactersComponent extends LitElement {
     await this.fetchData();
   }
 
+  public get prevDisabled(): boolean {
+    return this.page === 1;
+  }
+
+  public get nextDisabled(): boolean {
+    return this.page === this.pages;
+  }
+
   render() {
     return html`
       <div>
-        <button @click=${this.handlePrev} ?disabled=${this.page === 1}>
+        <button
+          @click=${this.handlePrev}
+          ?disabled=${this.prevDisabled}
+          class=${classMap({ disabled: this.prevDisabled })}
+        >
           PREV
         </button>
-        <button @click=${this.handleNext} ?disabled=${this.page === this.pages}>
+        <button
+          @click=${this.handleNext}
+          ?disabled=${this.nextDisabled}
+          class=${classMap({ disabled: this.nextDisabled })}
+        >
           NEXT
         </button>
       </div>
