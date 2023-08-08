@@ -24,5 +24,6 @@ export const styles = css`
     border-top: thick solid var(--teal);
     color: var(--grey);
     font-size: 0.5em;
+    mix-blend-mode: darken;
   }
 `;
