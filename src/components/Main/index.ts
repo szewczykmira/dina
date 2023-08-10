@@ -43,7 +43,10 @@ export class DinaApp extends LitElement {
     return html`
       <header-container title=${this.title}></header-container>
       <main>
-        <list-of-characters-component></list-of-characters-component>
+        <list-of-characters-component>
+          <span slot="back-text">PREV</span>
+          <span slot="forward-text">NEXT</span>
+        </list-of-characters-component>
         <div
           class="go-up-button change-location"
           @click=${this.goUp}
