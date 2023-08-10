@@ -78,14 +78,14 @@ export class ListOfCharactersComponent extends LitElement {
           ?disabled=${this.prevDisabled}
           class=${classMap({ disabled: this.prevDisabled })}
         >
-          PREV
+          <slot name="back-text">BACK</slot>
         </button>
         <button
           @click=${this.handleNext}
           ?disabled=${this.nextDisabled}
           class=${classMap({ disabled: this.nextDisabled })}
         >
-          NEXT
+          <slot name="forward-text">FORWARD</slot>
         </button>
       </div>
       <div class="characters">
